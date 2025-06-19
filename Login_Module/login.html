@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="./lernix_log.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lernix - Most comprehensive educational platform designed for Sri Lanka</title>
+        <link rel="stylesheet" href="./login.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <img src="./lernix_log.jpg" alt="">
+            <ul>
+                <li>Quest</li>
+                <li>Nebula</li>
+            </ul>
+            <ul>
+                <li><a href="./acc_create.html" target="_parent">Sign In</a></li>
+                <li><a href="./acc_create.html" target="_parent">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div id="hero">
+            <a href="https://whatsapp.com/channel/0029VbAw1tfLY6dBRd7mIg2z">
+                <div id="event">
+                    <div id="img-container"><img src="./nebula_avatar.jpg" alt=""></div>
+                    <div id="event-name">Lernix Paradise</div>
+                    <div id="event-intro">Join to Lernix Community &nbsp;  &RightArrow;</div>
+                </div>
+            </a>
+            
+            <p id="welcome-text">Futuristic And Smart Educational Destination.</p>
+            <p id="intro">Comprehensive Educational Platform Designed For Sri Lanka.</p>
+            <div id="form"><input type="email" placeholder="Email address" id="email">
+            <button onclick="signupwithEmail()">Sign up for Lernix</button></div>
+            <div id="heroFooter">
+                <ul>
+                    <li><p class="num">3000+</p><p class="tag">Student Users</p></li>
+                    <li><p class="num">75%</p><p class="tag">Productivity</p></li>
+                    <li><p class="num">50+</p><p class="tag">Developers</p></li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            function signupwithEmail() {
+                if(document.getElementById("email").value == "") {
+                    document.getElementById("email").setAttribute("placeholder", "Please Enter Email");
+                }
+                else if(document.getElementById("email").value != "") {
+                    window.open("./acc_create.html", "_parent");
+                };
+            };
+        </script>
+    </body>
+</html>

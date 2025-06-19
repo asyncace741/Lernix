@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./nebula.ui.play.css">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <nav id="nav-bar">
+            NEBULA &nbsp; AI &nbsp; Assistant
+        </nav>
+        <div id="hero">
+            <div id="chat-area">
+                <div class="neb-reply">Nebula: <br>Hello I am Nebula, <br> This featute still in testing stages. Expect me soon.</div>
+            </div>
+            <!-- Questions in this js -->
+            <script src="../Quest_Module/database.js"></script>
+            <!-- write this js code -->
+             <script>
+const buttons = document.querySelectorAll('.neb-reply-buttons button');
+const chatArea = document.getElementById('chat-area');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const selectedSubject = btn.textContent;
+    const paper = databaseArray.find(p => p.subject === selectedSubject);
+
+    if (paper) {
+      chatArea.innerHTML += "<div class='user-reply'>selectedSubject selected</div>";
+      paper.question.forEach((q, i) => {
+        const qHtml = "<div class='neb-reply'> Q{i + 1}: q.text<div class='neb-reply-buttons'>{q.answer.map((ans, idx) => <button onclick='checkAnswer(idx,{q.correct})'>${ans}</button>).join('')}</div></div>";
+        chatArea.innerHTML += qHtml;
+      });
+    } else {
+      chatArea.innerHTML += "<div class='neb-reply'>Subject not found.</div>";
+    }
+  });
+});
+
+function checkAnswer(selected, correct) {
+  if (selected === correct) {
+    alert("✅ Correct!");
+  } else {
+    alert("❌ Try Again");
+  }
+}
+
+
+             </script>
+        </div>
+    </body>
+</html>

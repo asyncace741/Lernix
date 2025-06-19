@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign up | AI Scriptora</title>
+        <link rel="stylesheet" href="./nebula+redirect.css">
+        <style></style>
+    </head>
+    <body>
+        <div id="acc-details-confirm-container">
+            <div id="top">
+                <div id="svg-bin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 24 24">
+                        <path d="M12 2C9.79 2 8 3.79 8 6v4H6c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2h-2V6c0-2.21-1.79-4-4-4zm-2 4c0-1.1.9-2 2-2s2 .9 2 2v4h-4V6zm6 6v6H8v-6h8z"/>
+                    </svg>
+                </div>
+                <p id="text">Signed in with: <br>
+                    <span id="name"></span> <br>
+                    <span id="email"></span>
+                </p>
+            </div>
+            <button onclick="askforPWD()">Continue as <span id="namebtn"></span></button>
+        </div>
+
+        <script>
+            if(localStorage.getItem("nebulaCGI") == "true") {
+                window.open("./nebula.ui.play.html", "_parent")
+            }
+            document.getElementById("name").innerHTML = localStorage.getItem("fname");
+            document.getElementById("email").innerHTML = localStorage.getItem("email");
+            document.getElementById("namebtn").innerHTML = localStorage.getItem("fname");
+            
+            function askforPWD() {
+                var input = prompt("Enter password:");
+                if(encodeURIComponent(input) == localStorage.getItem("pwd")) {
+                    localStorage.setItem("nebulaCGI", "true")
+                    window.open("./nebula.ui.play.html", "_parent");
+                }
+            }
+        </script>
+    </body>
+</html>

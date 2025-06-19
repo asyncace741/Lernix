@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lernix</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav id="navigation-bar">
+            <div id="platform-name">Lernix</div>
+            <ul id="nav">
+                <a href="../Quest_Module/library.html"><li>Quest</li></a>
+                <a href="../Nebula_Module/reg.html"><li>Nebula Chat</li></a>
+            </ul>
+            <ul id="options">
+                <input type="text" name="" id="search" placeholder="Type to check availability...   /" list="suggestions" onkeyup="PickPaper()">
+                <button onclick="logoutAccountPage()">Log out</button>
+                <datalist id="suggestions">
+<option value="Science"><option value="History">
+<option value="Geography"><option value="Sinhala"><option value="2020 papers"><option value="2019 papers">
+<option value="2018 papers"><option value="2017 papers"><option value="2016 papers"><option value="2020 Science">
+<option value="2020 History"><option value="2020 Geography"><option value="2020 Sinhala"><option value="2019 Science">
+<option value="2019 History"><option value="2019 Geography"><option value="2019 Sinhala"><option value="2018 Science">
+<option value="2018 History"><option value="2018 Geography"><option value="2018 Sinhala"><option value="2017 Science">
+<option value="2017 History"><option value="2017 Geography"><option value="2017 Sinhala"><option value="2016 Science">
+<option value="2016 History"><option value="2016 Geography"><option value="2016 Sinhala">
+                </datalist>
+            </ul>
+        </nav>
+        <div id="introduction">Hello <span id="User">Prabath</span>, <br>
+            <span id="wish">Good Night</span> Scroll down to dive deeply in knowledge ocean.
+        </div>
+
+        <div id="tab-changing-section">
+            <div id="tabs-titles">
+                <ul id="tab-names">
+                    <li>Smart Stationaries</li>
+                    <li>Chat with Virtual Assistant</li>
+                    <li>ME</li>
+                </ul>
+            </div>
+            <div id="conversation-tab">
+                <div id="selection-container">
+                    Select Subject: 
+                    <select name="" id="">
+                        <option value="SCI" selected>SCIENCE</option>
+                        <option value="HISTORY">HISTORY</option>
+                        <option value="GEO">GEOGRAPHY</option>
+                        <option value="SINHALA">SINHALA</option>
+                        <option value="BUD">BUDDHISM</option>
+                    </select>
+                    Select Year:
+                    <select name="" id="">
+                        <option value="2021" selected>2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                    </select>
+                    <button>Find Paper</button>
+                </div>
+                <div id="more-papers">
+                    <a href="../Quest_Module/library.html"><button>Go to Library Collection</button></a>
+                </div>
+                <div id="msg-area">
+                    <div id="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#58a6ff" viewBox="0 0 24 24">
+                            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.9c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.7 1.9-1.1.1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.4-2.7 5.4-5.3 5.7.5.5.8 1.2.8 2.4v3.6c0 .3.2.6.8.5a10.9 10.9 0 0 0 7.9-10.9C23.5 5.65 18.35.5 12 .5z"/>
+                        </svg>
+                    </div>
+                    
+                    <div id="msg-info">
+                        <div id="sender">Prabath Wanasinghe [ Founder - Scriptora Software Company ]</div>
+                        <div id="msg-text">Hello There, <br>
+                            Soup to syntax — Lernix is your dish! <button>Lernix</button>  has been started the
+                            smart era of Sri-lanka's education. Through offering the experience of
+                            <button>Computerized Education.</button> Smarter, Faster and <button>Secure</button> Service with
+                            optimized performences on Server Side. Lernix has developed a virtual assistant to inter-communicate with 
+                            students <button>"Nebula Pre-trained Chat Module"</button>
+                             Stay connected with our <button>global community.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="commits-tab" style="background: url('./nebula.jpg'); background-size: 90%;">
+                <div id="container-of-nebula-launcher" style=" display: flex; flex-direction: column; justify-content: center; gap: 30px; padding: 80px;">
+                    <h1>Seamless intergrations with pre-trained AI Agent</h1>
+                    Nebula using pre-trained algorithem, so mistakes are possible. 
+                    <a href="../Nebula_Module/reg.html", target="_parent"><button>Sign in to Scriptora AI Project</button></a>
+                </div>
+            </div>
+            <div id="checks-tab"></div>
+        </div>
+        <script src="./tab.togle.js"></script>
+        <script src="./great.js"></script>
+    </body>
+</html>

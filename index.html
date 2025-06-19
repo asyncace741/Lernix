@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./nebula_avatar.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scriptora Software Developer</title>
+    <style>
+
+        #hero {
+            width: 100vw;
+            height: 100vh;
+            background: #101826;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #hero img {
+            width: 30%;
+            border-radius: 10%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="hero">
+        <img src="./scriptora_logo.jpg" alt="">
+        <p id="introducing">Scriptora Software Company</p>
+        <script>
+
+            setInterval(() => {
+                if(
+                    localStorage.getItem("fname") && 
+                    localStorage.getItem("lname") && 
+                    localStorage.getItem("pwd") && 
+                    localStorage.getItem("email")
+                ) {
+                    window.open("./Home_Module/homepage.html", "_parent");
+                } else {
+                    window.open("./Login_Module/login.html", "_parent");
+                }
+            },6000)
+
+        </script>
+    </div>
+</body>
+</html>

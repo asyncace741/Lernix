@@ -1,0 +1,373 @@
+div#introduction {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+a {
+  text-decoration: none;
+}
+#navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161b22; /* Darker background for the nav bar */
+    padding: 8px 16px;
+    border-bottom: 1px solid #30363d; /* Subtle border at the bottom */
+}
+
+#platform-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #c9d1d9; /* Light color for the platform name */
+    margin-right: 16px;
+    /* You could also add a GitHub-like icon here if you have one */
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* Allows this section to take up available space */
+}
+
+#nav li {
+    padding: 4px 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #c9d1d9; /* Link color */
+    transition: color 0.2s ease-in-out;
+}
+
+#nav li:hover {
+    color: #58a6ff; /* A slightly lighter blue on hover, similar to GitHub links */
+}
+
+#options {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#search {
+    background-color: #0d1117; /* Darker background for the search input */
+    border: 1px solid #30363d; /* Border color */
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #c9d1d9;
+    font-size: 14px;
+    margin-right: 16px;
+    width: 250px; /* Adjust width as needed */
+    outline: none; /* Remove default outline */
+}
+
+#search::placeholder {
+    color: #8b949e; /* Placeholder text color */
+}
+
+#search:focus {
+    border-color: #58a6ff; /* Blue border on focus, similar to GitHub */
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.2); /* Subtle glow on focus */
+}
+
+#options button {
+    background-color: #238636; /* Green background for "Sign up" in GitHub, adapted for "Log out" */
+    color: #ffffff;
+    border: 1px solid rgba(240, 246, 252, 0.1); /* Subtle border */
+    border-radius: 6px;
+    padding: 6px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+#options button:hover {
+    background-color: #2ea043; /* Darker green on hover */
+    border-color: rgba(240, 246, 252, 0.2);
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    background-color: #f6f8fa;
+}
+
+#tab-changing-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d0d7de;
+    padding: 0 16px;
+    box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+#tabs-titles {
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#tab-names {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#tab-names li {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #57606a;
+    position: relative;
+    top: 1px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+#tab-names li:hover {
+    color: #0a0a0a;
+    border-bottom-color: #d0d7de; 
+}
+
+#tab-names li.active {
+    color: #0a0a0a;
+    border-bottom-color: #fd8c73;
+    font-weight: 600;
+}
+#conversation-tab,
+#commits-tab,
+#checks-tab,
+#file-changed-tab {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1280px;
+    background-color: #ffffff;
+    border: 1px solid #d0d7de; 
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    margin-top: -1px;
+    width: 100%;
+    height: 65vh;
+    color: #fff;
+    overflow-y: auto;
+    display: none; 
+    border-radius: 30px;
+}
+#conversation-tab {
+    display: block;
+}
+#conversation-tab p {
+    font-size: 14px;
+    color: #e2c3dc;
+    line-height: 1.5;
+}
+
+#conversation-tab a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+#conversation-tab a:hover {
+    text-decoration: underline;
+}
+
+#conversation-tab .guidelines ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#conversation-tab .guidelines li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #24292f;
+}
+
+.copilot-comment {
+    background-color: #f0f6fc;
+    border: 1px solid #c8e1ff;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #24292f;
+}
+
+.copilot-comment strong {
+    font-weight: 600;
+}
+#selection-container {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  padding: 16px;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+#selection-container select,
+#selection-container button {
+  background-color: #161b22;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+#selection-container select:focus,
+#selection-container button:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3);
+}
+
+#selection-container button:hover {
+  background-color: #238636;
+  color: #ffffff;
+  border-color: #2ea043;
+  cursor: pointer;
+}
+
+#selection-container select:hover {
+  border-color: #58a6ff;
+  cursor: pointer;
+}
+#msg-area {
+  display: flex;
+  align-items: flex-start;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px;
+  margin: 10px 0;
+  color: #c9d1d9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#icon {
+  width: 40px;
+  height: 40px;
+  background-color: #21262d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+#msg-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#sender {
+  font-weight: 600;
+  color: #58a6ff;
+  margin-bottom: 4px;
+}
+
+#msg-text {
+  color: #c9d1d9;
+  line-height: 1.4;
+}
+#msg-text button {
+  background: transparent;
+  color: #58a6ff;
+  border: 1px solid #58a6ff;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#msg-text button:hover {
+  background: #58a6ff20;
+  color: #ffffff;
+}
+#more-papers {
+  text-align: center;
+  padding: 2rem;
+}
+
+#more-papers {
+  text-align: center;
+  padding: 2rem;
+  margin: 10px;
+}
+
+#more-papers button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #238636; /* GitHub green button */
+  border: 1px solid #2ea043;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#more-papers button:hover {
+  background-color: #2ea043;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(46, 160, 67, 0.3);
+}
+
+#more-papers button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 160, 67, 0.4);
+}
+#container-of-nebula-launcher {
+  background-color: #2c092f7c;
+  backdrop-filter: blur(5px);
+  color: #c9d1d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 80px;
+  height: 70%;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#container-of-nebula-launcher button {
+  background-color: #21262d;
+  color: #58a6ff;
+  border: 1px solid #30363d;
+  padding: 12px 24px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#container-of-nebula-launcher button:hover {
+  background-color: #30363d;
+  transform: translateY(-2px);
+}
+
+#container-of-nebula-launcher button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.3);
+}
